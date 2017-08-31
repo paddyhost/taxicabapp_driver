@@ -5,6 +5,7 @@
     tools:context="com.example.admin.taxicabdriver.FragmentListRequest"
     android:orientation="vertical"
     android:background="@color/colorPagebg">
+	
     <RelativeLayout
         android:id="@+id/lt_status"
         android:layout_width="match_parent"
