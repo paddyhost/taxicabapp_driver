@@ -48,6 +48,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
 
+
             if (/* Check if data needs to be processed by long running job */ true) {
 
                 sendNotification( remoteMessage.getData().toString());
