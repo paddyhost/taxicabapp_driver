@@ -1,4 +1,4 @@
-package com.example.admin.taxicabdriver;
+package com.example.admin.taxicabdriver.Activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -10,9 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ListView;
 
-import java.util.List;
+import com.example.admin.taxicabdriver.R;
 
 public class HomeScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -41,7 +40,8 @@ public class HomeScreen extends AppCompatActivity
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
+        if (drawer.isDrawerOpen(GravityCompat.START))
+        {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();

@@ -1,4 +1,4 @@
-package com.example.admin.taxicabdriver;
+package com.example.admin.taxicabdriver.Activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.example.admin.taxicabdriver.R;
 
 public class FragmentListRequest extends Fragment{
     private Button gobutton;
