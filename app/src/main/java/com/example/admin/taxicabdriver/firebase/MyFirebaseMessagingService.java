@@ -10,7 +10,7 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
-import com.example.admin.taxicabdriver.HomeScreen;
+import com.example.admin.taxicabdriver.Activity.HomeScreen;
 import com.example.admin.taxicabdriver.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
