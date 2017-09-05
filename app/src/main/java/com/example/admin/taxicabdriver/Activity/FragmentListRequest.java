@@ -1,11 +1,13 @@
 package com.example.admin.taxicabdriver.Activity;
 
+import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -13,7 +15,7 @@ import android.widget.TextView;
 
 import com.example.admin.taxicabdriver.R;
 
-public class FragmentListRequest extends Fragment{
+public class FragmentListRequest extends Fragment {
     private Button gobutton;
     private ImageView imgstatus;
     private TextView status, txtstatus, status_text;
@@ -98,6 +100,14 @@ public class FragmentListRequest extends Fragment{
         RequestList requestList = new RequestList(getActivity(), req_status, pickup_point, target_point, ride_date, ride_time);
         listrides =(ListView)view.findViewById(R.id.listreq);
         listrides.setAdapter(requestList);
+        listrides.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                ft.replace(R.id.framestatus, new FragmentRideDetails());
+                ft.commit();
+            }
+        });
         return view;
     }
 }
